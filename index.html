@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rohit Moslia - Civil Engineer, Data Scientist & Digital Marketing Expert based in Jammu. Explore my portfolio, projects and certifications.">
+<meta name="keywords" content="Rohit Moslia, Civil Engineer Jammu, Data Scientist, Digital Marketing, AutoCAD, SEO Expert, MBA Data Science">
+<title>Rohit Moslia | Civil Engineer & Digital Marketing Expert</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0d0f;
+    --surface: #131618;
+    --card: #1a1d21;
+    --accent: #e8c84a;
+    --accent2: #4ae8c8;
+    --text: #f0ece0;
+    --muted: #7a7a6e;
+    --border: #2a2d31;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(11,13,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 60% at 80% 50%, rgba(232,200,74,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(74,232,200,0.05) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: rgba(232,200,74,0.12);
+    color: var(--accent);
+    border: 1px solid rgba(232,200,74,0.3);
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero-name span { color: var(--accent); }
+
+  .hero-title {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.7;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0b0d0f;
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,200,74,0.3);
+  }
+
+  .btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    animation: fadeUp 0.8s 0.15s ease both;
+  }
+
+  .profile-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+    width: 300px;
+  }
+
+  .profile-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 21px;
+    background: linear-gradient(135deg, rgba(232,200,74,0.3), transparent 50%, rgba(74,232,200,0.2));
+    z-index: -1;
+  }
+
+  .profile-initials {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #0b0d0f;
+    margin: 0 auto 1rem;
+  }
+
+  .profile-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .profile-card p { color: var(--muted); font-size: 0.85rem; }
+
+  .profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat { text-align: center; }
+  .stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--accent); }
+  .stat span { font-size: 0.7rem; color: var(--muted); }
+
+  /* SECTIONS */
+  section { padding: 5rem 4rem; max-width: 1200px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  /* SKILLS */
+  #skills { padding: 5rem 4rem; max-width: 1200px; margin: 0 auto; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .skill-card:hover {
+    border-color: rgba(232,200,74,0.4);
+    transform: translateY(-4px);
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .skill-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .skill-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+  /* EXPERIENCE */
+  .timeline { position: relative; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+
+  .timeline-date { font-size: 0.78rem; color: var(--accent2); letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+  .timeline-role { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.2rem; }
+  .timeline-company { font-size: 0.85rem; color: var(--muted); }
+
+  /* CERTIFICATIONS */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: border-color 0.3s;
+  }
+
+  .cert-item:hover { border-color: rgba(74,232,200,0.4); }
+
+  .cert-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent2);
+    flex-shrink: 0;
+  }
+
+  .cert-item span { font-size: 0.82rem; color: var(--text); line-height: 1.4; }
+
+  /* PORTFOLIO UPLOAD SECTION */
+  #portfolio { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .portfolio-placeholder {
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: border-color 0.3s;
+    cursor: pointer;
+  }
+
+  .portfolio-placeholder:hover { border-color: var(--accent); }
+
+  .upload-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .portfolio-placeholder h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .portfolio-placeholder p { color: var(--muted); font-size: 0.9rem; }
+
+  #fileInput { display: none; }
+
+  .portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .gallery-item {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-remove {
+    position: absolute;
+    top: 8px; right: 8px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 26px; height: 26px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* CONTACT / FEEDBACK */
+  #contact { background: var(--surface); border-top: 1px solid var(--border); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-detail .icon {
+    width: 36px; height: 36px;
+    background: rgba(232,200,74,0.1);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* FORM */
+  .form-group { margin-bottom: 1.2rem; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--accent); }
+
+  .form-group textarea { resize: vertical; min-height: 130px; }
+
+  .form-group select option { background: var(--card); }
+
+  .form-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-tab {
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+
+  .form-tab.active {
+    background: var(--accent);
+    color: #0b0d0f;
+    border-color: var(--accent);
+    font-weight: 500;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--accent);
+    color: #0b0d0f;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,200,74,0.3);
+  }
+
+  .success-msg {
+    display: none;
+    background: rgba(74,232,200,0.1);
+    border: 1px solid rgba(74,232,200,0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    color: var(--accent2);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* FAQ */
+  #faq { max-width: 1200px; margin: 0 auto; padding: 5rem 4rem; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.2rem 0;
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    user-select: none;
+  }
+
+  .faq-question:hover { color: var(--accent); }
+
+  .faq-toggle {
+    font-size: 1.2rem;
+    color: var(--accent);
+    transition: transform 0.3s;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-answer { max-height: 200px; padding-top: 0.8rem; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+  /* ASK QUESTION */
+  .ask-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .ask-box h4 { font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  footer span { color: var(--accent); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    #hero { padding: 7rem 1.5rem 3rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-visual { order: -1; }
+    section, #skills, #faq { padding: 3rem 1.5rem; }
+    #contact { padding: 3rem 1.5rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">RM.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-tag">✦ Available for Projects</div>
+      <h1 class="hero-name">Rohit<br><span>Moslia</span></h1>
+      <p class="hero-title">Civil Engineer · Data Scientist · Digital Marketing Expert<br>Based in Jammu, J&K — Building solutions at the intersection of engineering & data.</p>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="profile-card">
+        <div class="profile-initials">RM</div>
+        <h3>Rohit Moslia</h3>
+        <p>Civil Eng · MBA Data Science · Digital Marketing</p>
+        <div class="profile-stats">
+          <div class="stat">
+            <strong>3+</strong>
+            <span>Years Exp</span>
+          </div>
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Certifications</span>
+          </div>
+          <div class="stat">
+            <strong>7.8</strong>
+            <span>CGPA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<div id="skills" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section>
+  <div class="reveal">
+    <div class="section-label">What I Bring</div>
+    <h2 class="section-title">My Core Skills</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">🏗️</div>
+      <h4>Civil Engineering</h4>
+      <p>AutoCAD, Civil3D, Revit — structural design, project management, building codes & land development in J&K.</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">📊</div>
+      <h4>Data Science & Analytics</h4>
+      <p>MBA in Data Science — advanced Excel, data interpretation, analysis, and business intelligence.</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">📣</div>
+      <h4>Digital Marketing</h4>
+      <p>SEO (On-page & Off-page), Google Ads, content strategy — helping brands grow online visibility.</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">👔</div>
+      <h4>Management & Leadership</h4>
+      <p>Strategic HR, team leadership, project scheduling, resource allocation & organizational skills.</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">💻</div>
+      <h4>Software Proficiency</h4>
+      <p>MS Word, Excel, PowerPoint, AutoCAD, Civil3D, Revit — full professional software suite.</p>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🔍</div>
+      <h4>Research & Problem Solving</h4>
+      <p>Critical thinking, data-driven decision making, ability to analyze complex engineering and business challenges.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal">
+    <div class="section-label">Work History</div>
+    <h2 class="section-title">Experience</h2>
+  </div>
+  <div class="timeline reveal">
+    <div class="timeline-item">
+      <div class="timeline-date">August 2024 — Present</div>
+      <div class="timeline-role">Digital Marketing Intern</div>
+      <div class="timeline-company">Mobility Foresights</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 2021 — January 2024</div>
+      <div class="timeline-role">Civil Engineer</div>
+      <div class="timeline-company">Girdhari Lal Parihar, Hidyal Kishtwar, Jammu & Kashmir</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 3rem;" class="reveal">
+    <div class="section-label">Education</div>
+    <h2 class="section-title" style="font-size: 1.8rem;">Academic Background</h2>
+  </div>
+  <div class="timeline reveal">
+    <div class="timeline-item">
+      <div class="timeline-date">Completed August 2025 · CGPA 7.71</div>
+      <div class="timeline-role">MBA — Data Science</div>
+      <div class="timeline-company">Amity University Online, Noida, Uttar Pradesh</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Completed September 2021 · CGPA 7.8</div>
+      <div class="timeline-role">B.Tech — Civil Engineering</div>
+      <div class="timeline-company">Aman Bhalla Institute of Engineering & Technology, Punjab Technical University</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Completed November 2015 · Division I</div>
+      <div class="timeline-role">Diploma, DCPA</div>
+      <div class="timeline-company">Kawa Institute of Management & Technology, Jammu & Kashmir</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 3rem;" class="reveal">
+    <div class="section-label">Achievements</div>
+    <h2 class="section-title" style="font-size: 1.8rem;">Certifications</h2>
+  </div>
+  <div class="cert-grid reveal">
+    <div class="cert-item"><div class="cert-dot"></div><span>Advanced Excel — Amity University</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>Strategic Human Resource Management</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>Principles of Retailing</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>Professional & Life Skills</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>Leadership & Motivation in Organization</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>Certificate in Mathematics</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>SEO — On Page & Off Page</span></div>
+    <div class="cert-item"><div class="cert-dot"></div><span>Google Ads</span></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section style="max-width:1200px; margin:0 auto; padding: 5rem 4rem;">
+  <div class="reveal">
+    <div class="section-label">My Work</div>
+    <h2 class="section-title">Portfolio</h2>
+  </div>
+  <div class="portfolio-placeholder reveal" onclick="document.getElementById('fileInput').click()">
+    <div class="upload-icon">📁</div>
+    <h3>Upload Your Work Here</h3>
+    <p>Click to upload images, designs, project files — anything you want to showcase!</p>
+    <p style="margin-top:0.5rem; color: var(--accent); font-size:0.85rem;">Supports JPG, PNG, PDF, and more</p>
+  </div>
+  <input type="file" id="fileInput" multiple accept="image/*,.pdf" onchange="handleUpload(event)">
+  <div class="portfolio-gallery" id="gallery"></div>
+</section>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="reveal">
+    <div class="section-label">Common Questions</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>What services do you offer?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">I offer civil engineering consulting, data analysis & science solutions, digital marketing strategy (SEO, Google Ads), and project management services. I bring a unique multi-disciplinary approach.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Are you available for freelance projects?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">Yes! I'm open to freelance and consulting projects in civil engineering, digital marketing, and data science. Feel free to reach out through the contact form below.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>What tools and software do you use?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">AutoCAD, Civil3D, Revit for engineering work. Advanced Excel for data analysis. Google Ads, SEO tools for digital marketing. MS Office Suite for documentation and presentations.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Where are you based? Do you work remotely?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">I'm based in Jammu, Jammu & Kashmir, India. I'm open to both on-site projects in J&K and remote work across India and internationally.</div>
+  </div>
+
+  <!-- ASK A QUESTION BOX -->
+  <div class="ask-box reveal">
+    <h4>Still have a question? Ask me directly!</h4>
+    <div class="form-group">
+      <input type="text" id="askName" placeholder="Your name" />
+    </div>
+    <div class="form-group">
+      <textarea id="askQuestion" placeholder="Type your question here..." style="min-height: 80px;"></textarea>
+    </div>
+    <button class="btn-submit" onclick="submitQuestion()">Send Question →</button>
+    <div class="success-msg" id="askSuccess">✅ Your question has been sent! Rohit will reply soon.</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div id="contact" style="background: var(--surface); border-top: 1px solid var(--border);">
+<section style="max-width:1200px; margin:0 auto; padding: 5rem 4rem;">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-label">Let's Connect</div>
+      <h3>Get In Touch</h3>
+      <p>Have a project in mind or want to collaborate? Send me a message and I'll get back to you as soon as possible!</p>
+      <div class="contact-detail">
+        <div class="icon">📧</div>
+        <span>rohitmoslia63@gmail.com</span>
+      </div>
+      <div class="contact-detail">
+        <div class="icon">📞</div>
+        <span>+91 9149688410</span>
+      </div>
+      <div class="contact-detail">
+        <div class="icon">📍</div>
+        <span>Jammu, Jammu & Kashmir, India</span>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="form-tabs">
+        <button class="form-tab active" onclick="switchTab(this, 'feedback')">💬 Feedback</button>
+        <button class="form-tab" onclick="switchTab(this, 'hire')">🤝 Hire Me</button>
+        <button class="form-tab" onclick="switchTab(this, 'collab')">🚀 Collaborate</button>
+      </div>
+
+      <div id="form-feedback">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="fb-name" placeholder="Enter your name" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="fb-email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Your Feedback / Message</label>
+          <textarea id="fb-msg" placeholder="Share your thoughts, feedback, or inquiry..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm('feedback')">Send Message →</button>
+      </div>
+
+      <div id="form-hire" style="display:none">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="hire-name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label>Company / Organization</label>
+          <input type="text" id="hire-company" placeholder="Your company name" />
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select id="hire-service">
+            <option value="">Select a service</option>
+            <option>Civil Engineering Consulting</option>
+            <option>Data Science / Analytics</option>
+            <option>Digital Marketing (SEO)</option>
+            <option>Google Ads Management</option>
+            <option>Project Management</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea id="hire-msg" placeholder="Describe your project or requirements..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm('hire')">Send Request →</button>
+      </div>
+
+      <div id="form-collab" style="display:none">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="collab-name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label>Collaboration Type</label>
+          <input type="text" id="collab-type" placeholder="e.g. Research, Content, Business" />
+        </div>
+        <div class="form-group">
+          <label>Tell Me About Your Idea</label>
+          <textarea id="collab-msg" placeholder="What do you have in mind?"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm('collab')">Let's Talk →</button>
+      </div>
+
+      <div class="success-msg" id="contactSuccess">✅ Message sent! Rohit will reply to your email shortly.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Rohit Moslia</span> · Civil Engineer · Data Scientist · Digital Marketing Expert · Jammu, J&K</p>
+  <p style="margin-top:0.4rem; font-size:0.75rem;">Designed to rank on Google · All rights reserved</p>
+</footer>
+
+<script>
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // FAQ TOGGLE
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  // FORM TABS
+  function switchTab(btn, tab) {
+    document.querySelectorAll('.form-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    ['feedback','hire','collab'].forEach(t => {
+      document.getElementById('form-'+t).style.display = t === tab ? 'block' : 'none';
+    });
+    document.getElementById('contactSuccess').style.display = 'none';
+  }
+
+  // PORTFOLIO UPLOAD
+  function handleUpload(e) {
+    const files = e.target.files;
+    const gallery = document.getElementById('gallery');
+    Array.from(files).forEach(file => {
+      if (!file.type.startsWith('image/')) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.innerHTML = `
+          <img src="${ev.target.result}" alt="${file.name}" />
+          <button class="gallery-remove" onclick="this.parentElement.remove()">✕</button>
+        `;
+        gallery.appendChild(div);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // FORM SUBMIT (simulated — opens mailto)
+  function submitForm(type) {
+    const configs = {
+      feedback: { name: 'fb-name', email: 'fb-email', msg: 'fb-msg', label: 'Feedback' },
+      hire:     { name: 'hire-name', email: 'hire-company', msg: 'hire-msg', label: 'Hire Request' },
+      collab:   { name: 'collab-name', email: 'collab-type', msg: 'collab-msg', label: 'Collaboration' }
+    };
+    const c = configs[type];
+    const name = document.getElementById(c.name).value;
+    const extra = document.getElementById(c.email).value;
+    const msg = document.getElementById(c.msg).value;
+
+    if (!name || !msg) { alert('Please fill in your name and message!'); return; }
+
+    const subject = encodeURIComponent(`[${c.label}] from ${name} via Portfolio`);
+    const body = encodeURIComponent(`Hi Rohit,\n\n${c.label} from: ${name}\n${extra ? 'Details: ' + extra + '\n' : ''}\nMessage:\n${msg}\n\n— Sent from rohitmoslia.com`);
+    window.location.href = `mailto:rohitmoslia63@gmail.com?subject=${subject}&body=${body}`;
+
+    document.getElementById('contactSuccess').style.display = 'block';
+  }
+
+  // QUESTION SUBMIT
+  function submitQuestion() {
+    const name = document.getElementById('askName').value;
+    const q = document.getElementById('askQuestion').value;
+    if (!name || !q) { alert('Please fill in your name and question!'); return; }
+
+    const subject = encodeURIComponent(`[Question] from ${name} via Portfolio`);
+    const body = encodeURIComponent(`Hi Rohit,\n\nA question from: ${name}\n\nQuestion:\n${q}\n\n— Sent from your portfolio website`);
+    window.location.href = `mailto:rohitmoslia63@gmail.com?subject=${subject}&body=${body}`;
+
+    document.getElementById('askSuccess').style.display = 'block';
+  }
+</script>
+</body>
+</html>
