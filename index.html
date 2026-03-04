@@ -38,8 +38,53 @@ section{padding:120px 40px}
 .btn-primary{background:#e8c84a;color:#000;padding:10px 20px;text-decoration:none;border-radius:6px}
 .btn-outline{border:1px solid #2a2d31;padding:10px 20px;text-decoration:none;color:#fff;border-radius:6px}
 footer{text-align:center;padding:30px;border-top:1px solid #2a2d31}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.gallery img{width:100%;border-radius:8px}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.gallery-item{
+position:relative;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+.delete-btn{
+position:absolute;
+top:5px;
+right:5px;
+background:red;
+color:white;
+border:none;
+border-radius:50%;
+width:22px;
+height:22px;
+cursor:pointer;
+font-size:12px;
+}
+
+form input,form textarea{
+display:block;
+width:100%;
+margin-bottom:10px;
+padding:10px;
+border-radius:5px;
+border:none;
+}
+
+form button{
+background:#e8c84a;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:6px;
+}
+
 </style>
 
 </head>
@@ -53,11 +98,13 @@ footer{text-align:center;padding:30px;border-top:1px solid #2a2d31}
 <section>
 <h1>Rohit Moslia</h1>
 <p>Civil Engineer · Data Scientist · Digital Marketing Expert</p>
-<a href="#portfolio" class="btn-primary">View Work</a>
-<a href="#contact" class="btn-outline">Contact</a>
+
+<a href="#portfolio" class="btn-primary">View Work</a> <a href="#contact" class="btn-outline">Contact</a>
+
 </section>
 
 <section id="portfolio">
+
 <h2>Portfolio</h2>
 
 <input type="file" id="fileInput" multiple>
@@ -73,6 +120,7 @@ footer{text-align:center;padding:30px;border-top:1px solid #2a2d31}
 <form action="https://formspree.io/f/xlgwyqlr" method="POST">
 
 <input type="hidden" name="_subject" value="Portfolio Message">
+<input type="hidden" name="_captcha" value="false">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
@@ -100,19 +148,40 @@ footer{text-align:center;padding:30px;border-top:1px solid #2a2d31}
 <script>
 
 function saveGallery(){
+
 const imgs=[];
-document.querySelectorAll('#gallery img').forEach(i=>imgs.push(i.src));
+document.querySelectorAll('#gallery img').forEach(i=>{
+imgs.push(i.src);
+});
+
 localStorage.setItem("portfolioImages",JSON.stringify(imgs));
+
 }
 
 function loadGallery(){
+
 const gallery=document.getElementById("gallery");
 const imgs=JSON.parse(localStorage.getItem("portfolioImages")||"[]");
 
 imgs.forEach(src=>{
-const img=document.createElement("img");
-img.src=src;
-gallery.appendChild(img);
+
+const div=document.createElement("div");
+div.className="gallery-item";
+
+div.innerHTML=`
+<img src="${src}">
+<button class="delete-btn">x</button>
+`;
+
+div.querySelector("button").onclick=function(){
+
+div.remove();
+saveGallery();
+
+};
+
+gallery.appendChild(div);
+
 });
 
 }
@@ -130,12 +199,24 @@ if(!file.type.startsWith('image/')) return;
 
 const reader=new FileReader();
 
-reader.onload=(ev)=>{
+reader.onload=function(ev){
 
-const img=document.createElement("img");
-img.src=ev.target.result;
+const div=document.createElement("div");
+div.className="gallery-item";
 
-gallery.appendChild(img);
+div.innerHTML=`
+<img src="${ev.target.result}">
+<button class="delete-btn">x</button>
+`;
+
+div.querySelector("button").onclick=function(){
+
+div.remove();
+saveGallery();
+
+};
+
+gallery.appendChild(div);
 
 saveGallery();
 
